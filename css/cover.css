@@ -182,6 +182,10 @@ p, h3, a {
 	margin-right: 4%;
 }
 
+.fa-code {
+  margin-right: 4%;
+}
+
 .fa-envelope:hover{
 	color: #eac161;
 }
