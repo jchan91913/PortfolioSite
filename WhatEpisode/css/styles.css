@@ -256,3 +256,13 @@ button {
 li > a {
 	font-family: BEBAS !important;
 }
+
+@media only screen and (max-width: 650px) {
+  #homepage-header{
+    font-size: 60px;
+  }
+
+	#homepage-info {
+		font-size: 30px;
+	}
+}
