@@ -82,7 +82,7 @@
       // Grab the image
   		image.src = 'https://image.tmdb.org/t/p/w300' + tvResults[i].poster_path;
       if (image.src == 'https://image.tmdb.org/t/p/w300null') {
-        image.src = 'http://isikonline.com/association/images/default_new_image.jpg';
+        image.src = 'img/default-image.jpg';
       }
       // Plus icon
       var plusIcon = document.createElement('span');
@@ -173,7 +173,7 @@
       // Grab the image
       image.src = 'https://image.tmdb.org/t/p/w300' + movieResults[i].poster_path;
       if (image.src == 'https://image.tmdb.org/t/p/w300null') {
-        image.src = 'http://isikonline.com/association/images/default_new_image.jpg';
+        image.src = 'img/default-image.jpg';
       }
       // Plus icon
       var plusIcon = document.createElement('span');
@@ -254,7 +254,7 @@
     // Grab the image
     image.src = 'https://image.tmdb.org/t/p/w300' + jsonResult.poster_path;
     if (image.src == 'https://image.tmdb.org/t/p/w300null') {
-      image.src = 'http://isikonline.com/association/images/default_new_image.jpg';
+      image.src = 'img/default-image.jpg';
     }
     // Delete icon
     var deleteIcon = document.createElement('span');
@@ -350,7 +350,7 @@
     // Grab the image
     image.src = 'https://image.tmdb.org/t/p/w300' + jsonResult.poster_path;
     if (image.src == 'https://image.tmdb.org/t/p/w300null') {
-      image.src = 'http://isikonline.com/association/images/default_new_image.jpg';
+      image.src = 'img/default-image.jpg';
     }
     // Delete icon
     var deleteIcon = document.createElement('span');
