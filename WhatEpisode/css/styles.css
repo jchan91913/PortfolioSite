@@ -4,8 +4,8 @@
 }
 
 @font-face {
-    font-family: BEBAS; /*a name to be used later*/
-    src: url(..\\font\\BEBAS.ttf); /*URL to font*/
+  font-family: BEBAS; /*a name to be used later*/
+  src: url(..\\font\\BEBAS.ttf); /*URL to font*/
 }
 
 .container {
@@ -86,7 +86,7 @@ input[type="email"], input[type="password"] {
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color: gray;
+  color: gray;
 }
 
 footer {
@@ -174,9 +174,9 @@ a.list-group-item:visited {
 	font-size: 100px;
 	color: #e6e6e6;
 	-ms-transform: rotate(-9deg); /* IE 9 */
-    -webkit-transform: rotate(-9deg); /* Chrome, Safari, Opera */
-    transform: rotate(-9deg);
-    animation: blinker 8s linear infinite;
+  -webkit-transform: rotate(-9deg); /* Chrome, Safari, Opera */
+  transform: rotate(-9deg);
+  animation: blinker 8s linear infinite;
 }
 
 #homepage-info {
@@ -185,9 +185,9 @@ a.list-group-item:visited {
 	font-size: 50px;
 	color: #e6e6e6;
 	-ms-transform: rotate(-9deg); /* IE 9 */
-    -webkit-transform: rotate(-9deg); /* Chrome, Safari, Opera */
-    transform: rotate(-9deg);
-    animation: blinker 8s linear infinite;
+  -webkit-transform: rotate(-9deg); /* Chrome, Safari, Opera */
+  transform: rotate(-9deg);
+  animation: blinker 8s linear infinite;
 }
 
 @keyframes blinker {
@@ -203,8 +203,10 @@ a.list-group-item:visited {
 	padding-top: 10%;
 	padding-bottom: 15%;
 	opacity: 0.8;
-	background-image: url("https://s-media-cache-ak0.pinimg.com/originals/07/90/61/0790614d2e71ac1bf20b6421ecb18e9d.jpg");
+	background-image: url("../img/movie-theatre.png");
 	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .fa-user {
