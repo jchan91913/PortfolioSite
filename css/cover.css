@@ -28,6 +28,7 @@ body {
   height: 100%;
   background-color: #333;
 }
+
 body {
   color: #fff;
   text-align: center;
@@ -83,8 +84,8 @@ p, h3, a {
 	border-color: #cdcdcd !important;
 }
 .btn-secondary:hover {
-	background-color: #fff !important;
-	border-color: #fff !important;
+	background-color: #333 !important;
+  color: #cdcdcd !important;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -127,7 +128,6 @@ p, h3, a {
 .inner {
   padding: 2rem;
 }
-
 
 /*
  * Header
@@ -210,7 +210,6 @@ p, h3, a {
     float: right;
   }
 }
-
 
 /*
  * Cover
