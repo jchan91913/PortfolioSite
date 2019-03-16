@@ -456,6 +456,12 @@
  if (tvSearchBtn != null) {
 	  // Add tv search event
 	  tvSearchBtn.addEventListener('click', e => {
+      // Check for empty search query
+      if (tvSearchQuery.value === '') {
+        // Display pop up
+        swal("Required" , "Please enter a show to search for.", "warning");
+        return;
+      }
 	  	var url = "https://api.themoviedb.org/3/search/tv?api_key=e0bc761be93675224d98aba674169611&language=en-US&query=" + tvSearchQuery.value + "&page=1";
 	  	httpGetAsync(url, handleTvResult);
 	  });
@@ -465,6 +471,12 @@
  if (movieSearchBtn != null) {
     // Add movie search event
     movieSearchBtn.addEventListener('click', e => {
+      // Check for empty search query
+      if (movieSearchQuery.value === '') {
+        // Display pop up
+        swal("Required" , "Please enter a movie to search for.", "warning");
+        return;
+      }
       var url = "https://api.themoviedb.org/3/search/movie?api_key=e0bc761be93675224d98aba674169611&language=en-US&query=" + movieSearchQuery.value + "&page=1";
       httpGetAsync(url, handleMovieResult);
     });
@@ -562,7 +574,6 @@
 	    if ((currentLocation === 'login.html') || (currentLocation === 'signup.html')) {
 	    	window.location = "index.html";
 	    }
-	    console.log(email);
 	    currentUser.textContent = email;
       loggedInUser = email;
       // Hide login and signup
@@ -577,8 +588,6 @@
       watchedNavItem.style.display = "inline";
 
 	  } else { // User is not signed in.
-	   console.log('no user logged in');
-     console.log(currentLocation);
      if ((currentLocation === 'shows.html') || (currentLocation === 'movies.html') || (currentLocation === 'moviesWatched.html') || (currentLocation === 'showsFinished.html')) {
         window.location = "login.html";
         alert("You need to log in to access this page. Please log in or sign up.")
