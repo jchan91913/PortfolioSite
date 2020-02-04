@@ -425,6 +425,28 @@
     tvDiv.appendChild(tvListItem);
   }
 
+  function searchForTVShows(searchQuery) {
+       // Check for empty search query
+       if (searchQuery === '') {
+        // Display pop up
+        swal("Required" , "Please enter a show to search for.", "warning");
+        return;
+      }
+	  	var url = "https://api.themoviedb.org/3/search/tv?api_key=e0bc761be93675224d98aba674169611&language=en-US&query=" + searchQuery + "&page=1";
+	  	httpGetAsync(url, handleTvResult);
+  }
+
+  function searchForMovies(searchQuery) {
+      // Check for empty search query
+      if (searchQuery === '') {
+        // Display pop up
+        swal("Required" , "Please enter a movie to search for.", "warning");
+        return;
+      }
+      var url = "https://api.themoviedb.org/3/search/movie?api_key=e0bc761be93675224d98aba674169611&language=en-US&query=" + searchQuery + "&page=1";
+      httpGetAsync(url, handleMovieResult);
+  }
+
   // Get elements
   // Login
   const loginEmail = document.getElementById('loginEmail');
@@ -455,31 +477,30 @@
  // Handles tv search
  if (tvSearchBtn != null) {
 	  // Add tv search event
-	  tvSearchBtn.addEventListener('click', e => {
-      // Check for empty search query
-      if (tvSearchQuery.value === '') {
-        // Display pop up
-        swal("Required" , "Please enter a show to search for.", "warning");
-        return;
-      }
-	  	var url = "https://api.themoviedb.org/3/search/tv?api_key=e0bc761be93675224d98aba674169611&language=en-US&query=" + tvSearchQuery.value + "&page=1";
-	  	httpGetAsync(url, handleTvResult);
-	  });
+	  tvSearchBtn.addEventListener('click', e => searchForTVShows(tvSearchQuery.value));
+    
+    tvSearchQuery.addEventListener('keyup', e => {
+        const key = e.which || e.keyCode;
+        // Check for 'Enter' key
+        if (key === 13) {
+            searchForTVShows(tvSearchQuery.value);
+        }
+    });
   }
 
   // Handles movie search
  if (movieSearchBtn != null) {
     // Add movie search event
-    movieSearchBtn.addEventListener('click', e => {
-      // Check for empty search query
-      if (movieSearchQuery.value === '') {
-        // Display pop up
-        swal("Required" , "Please enter a movie to search for.", "warning");
-        return;
-      }
-      var url = "https://api.themoviedb.org/3/search/movie?api_key=e0bc761be93675224d98aba674169611&language=en-US&query=" + movieSearchQuery.value + "&page=1";
-      httpGetAsync(url, handleMovieResult);
+    movieSearchBtn.addEventListener('click', e => searchForMovies(movieSearchQuery.value));
+
+    movieSearchQuery.addEventListener('keyup', e => {
+        const key = e.which || e.keyCode;
+        // Check for 'Enter' key
+        if (key === 13) {
+            searchForMovies(movieSearchQuery.value);
+        }
     });
+      
   }
 
   // Handles login
